@@ -1,0 +1,6 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-textarea name="systemMessage" label="System Message (Go back to default by writing: Default system message)" value={systemMessage} onchange={handleSystemMessageChange}></lightning-textarea>
+        <lightning-button label="Update System Message" onclick={sendSystemMessageToBackend} class="slds-m-top_small"></lightning-button>
+    </div>
+</template>
