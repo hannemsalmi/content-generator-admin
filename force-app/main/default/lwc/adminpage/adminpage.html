@@ -1,14 +1,20 @@
 <template>
     <div class="slds-m-around_medium">
+        <div class="container">
         <lightning-textarea name="inputSystemMessage" label="Update System Message" 
                             value={inputSystemMessage} onchange={handleSystemMessageChange}>
         </lightning-textarea>
+        <div class="buttonSection">
         <lightning-button label="Update System Message" onclick={sendSystemMessageToBackend} 
                           class="slds-m-top_small">
         </lightning-button>
         <lightning-button label="Reset to Default" onclick={resetToDefault} class="slds-m-top_small">
         </lightning-button>
+        </div>
+        <div class="cardText">
         <p class="slds-m-top_medium">Current System Message:</p>
         <p class="slds-p-horizontal_small">{currentSystemMessage}</p>
+        </div>
+        </div>
     </div>
 </template>
