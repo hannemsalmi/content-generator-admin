@@ -2,6 +2,10 @@
     <div class="slds-m-around_medium">
         <div class="container">
             <!-- System Message Section -->
+            <div class="cardText">
+                <p class="slds-m-top_medium">Current System Message:</p>
+                <p class="slds-p-horizontal_small">{currentSystemMessage}</p>
+            </div>
             <lightning-textarea name="inputSystemMessage" label="Update System Message"
                                 value={inputSystemMessage} onchange={handleSystemMessageChange}>
             </lightning-textarea>
@@ -13,14 +17,14 @@
                                   class="slds-m-top_small">
                 </lightning-button>
             </div>
-            <div class="cardText">
-                <p class="slds-m-top_medium">Current System Message:</p>
-                <p class="slds-p-horizontal_small">{currentSystemMessage}</p>
-            </div>
 
             <!-- Instagram Instruction Section -->
             <div>
-                <lightning-textarea name="inputInstagramInstruction" label="Instagram Instruction"
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current Instagram Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentInstagramInstruction}</p>
+                </div>
+                <lightning-textarea name="inputInstagramInstruction" label="Update Instagram Instructions"
                                     value={inputInstagramInstruction} onchange={handleInstagramInstructionChange}>
                 </lightning-textarea>
                 <div class="buttonSection">
@@ -31,15 +35,15 @@
                                       class="slds-m-top_small">
                     </lightning-button>
                 </div>
-                <div class="cardText">
-                    <p class="slds-m-top_medium">Current Instagram Instruction:</p>
-                    <p class="slds-p-horizontal_small">{currentInstagramInstruction}</p>
-                </div>
             </div>
 
             <!-- LinkedIn Instruction Section -->
             <div>
-                <lightning-textarea name="inputLinkedinInstruction" label="LinkedIn Instruction"
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current LinkedIn Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentLinkedinInstruction}</p>
+                </div>
+                <lightning-textarea name="inputLinkedinInstruction" label="Update LinkedIn Instructions"
                                     value={inputLinkedinInstruction} onchange={handleLinkedinInstructionChange}>
                 </lightning-textarea>
                 <div class="buttonSection">
@@ -50,15 +54,15 @@
                                       class="slds-m-top_small">
                     </lightning-button>
                 </div>
-                <div class="cardText">
-                    <p class="slds-m-top_medium">Current LinkedIn Instruction:</p>
-                    <p class="slds-p-horizontal_small">{currentLinkedinInstruction}</p>
-                </div>
             </div>
 
             <!-- Email Instruction Section -->
             <div>
-                <lightning-textarea name="inputEmailInstruction" label="Email Instruction"
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current Email Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentEmailInstruction}</p>
+                </div>
+                <lightning-textarea name="inputEmailInstruction" label="Update Email Instructions"
                                     value={inputEmailInstruction} onchange={handleEmailInstructionChange}>
                 </lightning-textarea>
                 <div class="buttonSection">
@@ -68,10 +72,6 @@
                     <lightning-button label="Reset to Default" onclick={resetToDefaultEmail} 
                                       class="slds-m-top_small">
                     </lightning-button>
-                </div>
-                <div class="cardText">
-                    <p class="slds-m-top_medium">Current Email Instruction:</p>
-                    <p class="slds-p-horizontal_small">{currentEmailInstruction}</p>
                 </div>
             </div>
         </div>
