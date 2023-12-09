@@ -22,15 +22,15 @@
   .cardText {
     max-width: 100%; /* Ensure the container does not exceed the width of its parent */
     padding: 0 20px;
+    margin-bottom: 20px;
   }
 
   .slds-m-top_medium {
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+
   .temStyle{
     box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) +
     40%), 0.8);
   }
-  

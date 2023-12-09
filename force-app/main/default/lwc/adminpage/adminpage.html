@@ -1,20 +1,79 @@
 <template>
     <div class="slds-m-around_medium">
         <div class="container">
-        <lightning-textarea name="inputSystemMessage" label="Update System Message" 
-                            value={inputSystemMessage} onchange={handleSystemMessageChange}>
-        </lightning-textarea>
-        <div class="buttonSection">
-        <lightning-button label="Update System Message" onclick={sendSystemMessageToBackend} 
-                          class="slds-m-top_small">
-        </lightning-button>
-        <lightning-button label="Reset to Default" onclick={resetToDefault} class="slds-m-top_small">
-        </lightning-button>
-        </div>
-        <div class="cardText">
-        <p class="slds-m-top_medium">Current System Message:</p>
-        <p class="slds-p-horizontal_small">{currentSystemMessage}</p>
-        </div>
+            <!-- System Message Section -->
+            <lightning-textarea name="inputSystemMessage" label="Update System Message"
+                                value={inputSystemMessage} onchange={handleSystemMessageChange}>
+            </lightning-textarea>
+            <div class="buttonSection">
+                <lightning-button label="Update System Message" onclick={sendSystemMessageToBackend} 
+                                  class="slds-m-top_small">
+                </lightning-button>
+                <lightning-button label="Reset to Default" onclick={resetToDefault} 
+                                  class="slds-m-top_small">
+                </lightning-button>
+            </div>
+            <div class="cardText">
+                <p class="slds-m-top_medium">Current System Message:</p>
+                <p class="slds-p-horizontal_small">{currentSystemMessage}</p>
+            </div>
+
+            <!-- Instagram Instruction Section -->
+            <div>
+                <lightning-textarea name="inputInstagramInstruction" label="Instagram Instruction"
+                                    value={inputInstagramInstruction} onchange={handleInstagramInstructionChange}>
+                </lightning-textarea>
+                <div class="buttonSection">
+                    <lightning-button label="Update Instructions" onclick={updateInstagramInstruction} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                    <lightning-button label="Reset to Default" onclick={resetToDefaultInstagram} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                </div>
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current Instagram Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentInstagramInstruction}</p>
+                </div>
+            </div>
+
+            <!-- LinkedIn Instruction Section -->
+            <div>
+                <lightning-textarea name="inputLinkedinInstruction" label="LinkedIn Instruction"
+                                    value={inputLinkedinInstruction} onchange={handleLinkedinInstructionChange}>
+                </lightning-textarea>
+                <div class="buttonSection">
+                    <lightning-button label="Update Instructions" onclick={updateLinkedinInstruction} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                    <lightning-button label="Reset to Default" onclick={resetToDefaultLinkedin} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                </div>
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current LinkedIn Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentLinkedinInstruction}</p>
+                </div>
+            </div>
+
+            <!-- Email Instruction Section -->
+            <div>
+                <lightning-textarea name="inputEmailInstruction" label="Email Instruction"
+                                    value={inputEmailInstruction} onchange={handleEmailInstructionChange}>
+                </lightning-textarea>
+                <div class="buttonSection">
+                    <lightning-button label="Update Instructions" onclick={updateEmailInstruction} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                    <lightning-button label="Reset to Default" onclick={resetToDefaultEmail} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                </div>
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current Email Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentEmailInstruction}</p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
