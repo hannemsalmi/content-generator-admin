@@ -74,6 +74,60 @@
                     </lightning-button>
                 </div>
             </div>
+             <!-- White paper Instruction Section -->
+             <div>
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current White Paper Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentWhitePaperInstruction}</p>
+                </div>
+                <lightning-textarea name="inputWhitePaperInstruction" label="Update White Paper Instructions"
+                                    value={inputWhitePaperInstruction} onchange={handleWhitePaperInstructionChange}>
+                </lightning-textarea>
+                <div class="buttonSection">
+                    <lightning-button label="Update Instructions" onclick={updateWhitePaperInstruction} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                    <lightning-button label="Reset to Default" onclick={resetToDefaultWhitePaper} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                </div>
+            </div>
+             <!-- Blog Instruction Section -->
+             <div>
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current Blog Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentBlogInstruction}</p>
+                </div>
+                <lightning-textarea name="inputBlogInstruction" label="Update Blog Instructions"
+                                    value={inputBlogInstruction} onchange={handleBlogInstructionChange}>
+                </lightning-textarea>
+                <div class="buttonSection">
+                    <lightning-button label="Update Instructions" onclick={updateBlogInstruction} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                    <lightning-button label="Reset to Default" onclick={resetToDefaultBlog} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                </div>
+            </div>
+             <!-- E-Book Instruction Section -->
+             <div>
+                <div class="cardText">
+                    <p class="slds-m-top_medium">Current E-book Instruction:</p>
+                    <p class="slds-p-horizontal_small">{currentEBookInstruction}</p>
+                </div>
+                <lightning-textarea name="inputEBookInstruction" label="Update E-book Instructions"
+                                    value={inputEBookInstruction} onchange={handleEBookInstructionChange}>
+                </lightning-textarea>
+                <div class="buttonSection">
+                    <lightning-button label="Update Instructions" onclick={updateEBookInstruction} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                    <lightning-button label="Reset to Default" onclick={resetToDefaultEBook} 
+                                      class="slds-m-top_small">
+                    </lightning-button>
+                </div>
+            </div>
         </div>
     </div>
 </template>

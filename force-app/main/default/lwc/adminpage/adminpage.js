@@ -7,10 +7,16 @@ export default class SystemMessageUpdater extends LightningElement {
     @track currentInstagramInstruction = 'Loading...';
     @track currentLinkedinInstruction = 'Loading...';
     @track currentEmailInstruction = 'Loading...';
+    @track currentWhitePaperInstruction= 'Loading...';
+    @track currentEBookInstruction= 'Loading...';
+    @track currentBlogInstruction= 'Loading...';
 
     @track inputInstagramInstruction = '';
     @track inputLinkedinInstruction = '';
     @track inputEmailInstruction = '';
+    @track inputWhitePaperInstruction = '';
+    @track inputBlogInstruction = '';
+    @track inputEBookInstruction = '';
 
     connectedCallback() {
         this.fetchSystemMessage();
@@ -37,6 +43,9 @@ export default class SystemMessageUpdater extends LightningElement {
                 this.currentInstagramInstruction = data.instagram;
                 this.currentLinkedinInstruction = data.linkedin;
                 this.currentEmailInstruction = data.email;
+                this.currentWhitePaperInstruction = data.whitepaper;
+                this.currentEBookInstruction = data.ebook;
+                this.currentBlogInstruction = data.blog;
             } else {
                 console.error('Error fetching instructions. Status:', response.status);
             }
@@ -117,6 +126,33 @@ export default class SystemMessageUpdater extends LightningElement {
         this.currentEmailInstruction = this.inputEmailInstruction;
     }
 
+    handleWhitePaperInstructionChange(event) {
+        this.inputWhitePaperInstruction= event.target.value;
+    }
+
+    async updateWhitePaperInstruction() {
+        await this.updateInstructions('whitepaper', this.inputWhitePaperInstruction);
+        this.currentWhitePaperInstruction = this.inputWhitePaperInstruction;
+    }
+
+    handleEBookInstructionChange(event) {
+        this.inputEBookInstruction = event.target.value;
+    }
+
+    async updateEBookInstruction() {
+        await this.updateInstructions('e-book', this.inputEBookInstruction);
+        this.currentEBookInstruction = this.inputEBookInstruction;
+    }
+
+    handleBlogInstructionChange(event) {
+        this.inputBlogInstruction = event.target.value;
+    }
+
+    async updateBlogInstruction() {
+        await this.updateInstructions('blog', this.inputBlogInstruction);
+        this.currentBlogInstruction = this.inputBlogInstruction;
+    }
+
     async fetchDefaultInstruction(contentType) {
         try {
             const response = await fetch(`https://marketing-content-generator-02c05e08f82e.herokuapp.com/get-default-instruction/${contentType}`);
@@ -166,5 +202,17 @@ export default class SystemMessageUpdater extends LightningElement {
 
     async resetToDefaultEmail() {
         await this.fetchDefaultInstruction('email');
+    }
+
+    async resetToDefaultWhitePaper() {
+        await this.fetchDefaultInstruction('whitepaper');
+    }
+
+    async resetToDefaultBlog() {
+        await this.fetchDefaultInstruction('blog');
+    }
+
+    async resetToDefaultEBook() {
+        await this.fetchDefaultInstruction('e-book');
     }
 }
